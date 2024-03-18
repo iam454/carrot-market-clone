@@ -7,3 +7,9 @@
     @apply text-orange-500;
   }
 }
+
+@layer components {
+  .primary-btn {
+    @apply w-full bg-orange-500 text-white font-medium rounded-md text-center hover:bg-orange-400 transition-colors;
+  }
+}
