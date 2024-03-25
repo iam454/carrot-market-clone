@@ -3,14 +3,14 @@ interface FormInputProps {
   type: string;
   placeholder: string;
   required: boolean;
-  errors: string[];
+  errors?: string[];
 }
 export default function FormInput({
   name,
   type,
   placeholder,
   required,
-  errors,
+  errors = [],
 }: FormInputProps) {
   return (
     <div className="flex flex-col gap-2">
