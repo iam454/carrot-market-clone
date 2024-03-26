@@ -26,12 +26,12 @@ const formSchema = z
     email: z.string().email(),
     password: z
       .string()
-      .min(8)
+      .min(4)
       .regex(
         passwordRegex,
         "A password must have lowercase, UPPERCASE, a number and special characters."
       ),
-    confirmPassword: z.string().min(8),
+    confirmPassword: z.string().min(4),
   })
   .refine(checkPasswords, {
     message: "Both passwords must be the same.",
